@@ -15,7 +15,11 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+# imported say_hello function from views.py file in todo folder
+from todo.views import say_hello
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    # set the url to display output
+    path('hello/', say_hello, name='hello')
 ]
